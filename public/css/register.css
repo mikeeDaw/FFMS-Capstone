@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+}
+
+
+.contain{
+    border: 1px solid #fff;
+    padding: 30px 50px 40px 50px;
+    box-shadow: 0px 4px 10px -1px rgb(0 0 0 / 25%);
+    border-radius: 10px;
+}
+
+.logForm{
+    width: 100%;
+}
+
+.curv::before{
+    content: '';
+    background: linear-gradient(181.2deg, rgb(181, 239, 249) 10.5%, rgb(254, 254, 254) 86.8%);
+    width: 100%;
+    display: block;
+    height: 400px;
+    position: absolute;
+    top: 0px;
+    z-index: -5;
+}
+
+.curv::after{
+    content: '';
+    display: block;
+    z-index: -4;
+    position: absolute;
+    height: 427px;
+    background: #FFF;
+    width: 870px;
+    left: -369px;
+    border-radius: 100%;
+    top: 39px;
+    transform: rotate(356deg);
+    opacity: 0.6;
+}
+
+/* Form Header */
+.title{
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    color: #343434;
+}
+
+.left{text-align: left; }
+.center{text-align: center; display: block;}
+
+.logo{ width: 100%;}
+
+.logo > img {
+    width: 60%;
+    margin-bottom: 30px;
+}
+
+.reg{
+    padding: 10px 0;
+    margin: 15px 0 0 0;
+    background-color: #3f99f5;
+    border-radius: 10px;
+    font-family: 'Poppins';
+    letter-spacing: 1px;
+    border: 2px solid #6497cb7a;
+    color: #fff;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.reg:hover{
+    background-color: #fff;
+    border: 2px solid #3f99f5;
+    color: #3f99f5;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.errors{
+    margin: 20px 0;
+    text-align: center;
+    color: red;
+}
+
+.errors p{
+    margin: 8px 0;
+}
+
+/* Data Privacy Agree */
+
+#dataCheck{
+    // appearance: none;
+    border: 1px solid;
+    border-radius: 8px;
+    width: 25px;
+    height: 25px;
+}
+
+#dataCheck:checked{
+    background: #459cf2;
+    border-color: #459cf2;
+}
+
+#privState{
+    color: #1843e7;
+    border-bottom: 1px solid;
+    padding-bottom: 1px;
+}
+
+#privState:hover{
+    cursor: pointer;
+}
+
+#privOverlay{
+    background: #00000075;
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0;
+}
+#privOverlay.active, #privDialog.active{
+    pointer-events: all;
+    opacity: 1;
+}
+
+#privDialog{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 15px;
+    transition: all .15s ease-in;
+    z-index: 5;
+    pointer-events: none;
+}

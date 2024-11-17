@@ -1,0 +1,390 @@
+.fs-14{font-size: 14px;}
+.fs-12{font-size: 12px;}
+.fs-11{font-size: 11px;}
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.orderBox{
+    background: #90cefb4d;
+    color: #157ec1;
+}
+
+.boxIcon{
+    width: 70px;
+    height: 70px;
+}
+
+.upBtn{
+    font-size: 13px;
+    padding: 5px 13px;
+    border: 1px solid #1d80bf;
+    background: #fff;
+    color: #1d80bf;
+    transition: all .1s ease-in;
+}
+
+.upBtn:hover{
+    background: #1d80bf;
+    color: #FFF;
+
+}
+
+.status{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 13px;
+    background: #b7b7b747;
+    padding: 4px 11px;
+    color: #389708;
+}
+
+.paystat{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
+.paidTag{
+    position: absolute;
+    left: 145px;
+    background: #ededed;
+    padding: 3px 8px;
+    z-index: -1;
+}
+
+.paidTagTotal{
+    position: absolute;
+    left: 60px;
+    top: 0;
+    background: #ededed;
+    padding: 3px 8px;
+    z-index: 0;
+}
+
+.fs-14{font-size: 14px;}
+.titleBlue{color: #2577ab;}
+
+.curv::before{
+    content: '';
+    background: linear-gradient(181.2deg, rgb(181, 239, 249) 10.5%, rgb(254, 254, 254) 86.8%);
+    width: 100%;
+    display: block;
+    height: 300px;
+    position: absolute;
+    top: 0px;
+    z-index: -5;
+}
+
+.curv::after{
+    content: '';
+    display: block;
+    z-index: -4;
+    position: absolute;
+    height: 427px;
+    background: #FFF;
+    width: 870px;
+    right: -190px;
+    border-radius: 100%;
+    top: 39px;
+    transform: rotate(356deg);
+    opacity: 0.6;
+}
+
+.show-md{
+    display: none;
+}
+/* Payment Confirmation */
+.payView{
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    background: #fff;
+    padding: 1.5rem;
+    border: 1px solid #b9b9b9;
+    border-radius: 20px;
+    transition: all .15s ease-in;
+}
+
+.overlay{
+    position: fixed;
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0;
+    inset: 0;
+    background: hsla(0, 0%, 0%, 0.6);
+    transition: all .2s ease-in;
+}
+
+.payView.active{
+    display: block;
+}
+
+.overlay.active, .payView.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.imageContainer{
+    width: auto;
+}
+
+.payView .receiptExist {
+    width: auto;
+    max-height: 480px;
+    min-width: 400px;
+    min-height: 400px;
+}
+
+.nofile{
+    width: 400px;
+    height: 400px;
+}
+
+.nofileIMG{
+    width: auto;
+    height: 150px;
+    opacity: 0.6;
+}
+
+.nofileDesc{
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-55%);
+    opacity: 0.6;
+
+}
+
+.closeBtn{
+    top: -7px;
+    right: -1px;
+    cursor: pointer;
+}
+
+.close{
+    border: 1px solid transparent;
+    padding: 3px 13px;
+    background: #fff;
+    color: #dd3939;
+    transition: .15s all ease-in;
+}
+
+.close:hover{
+    border: 1px solid #dd3939;
+}
+
+.uploadRec input[type=file]{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+}
+
+.uploadRec input[type=file] + label {
+    text-overflow: ellipsis;
+    border: 1px solid #fff;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 6px 15px;
+    color: #f1e5e6;
+    background-color: #0b75b9;
+    width: 100%;
+    text-align: center;
+    transition: .15s all linear;
+}
+
+.payBTN{
+    border: 1px solid #fff;
+    white-space: nowrap;
+    padding: 7px 15px;
+    color: #f1e5e6;
+    background-color: #0b75b9;
+    width: 100%;
+    text-align: center;
+    transition: .15s all linear;
+    border-radius: 10px;
+}
+
+#payRedirect{
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.uploadRec input[type=file] + label:hover, .payBTN:hover{
+    background-color: #FFF;
+    color: #0b75b9;
+    border-color: #0b75b9;
+}
+
+#viewReciept{
+    background-color: #FFF;
+    border: 1px solid #0b75b9;
+    border-radius: 7px;
+    width: 100%;
+    text-align: center;
+    padding: 4px 0;
+    color: #0b75b9;
+    transition: .15s all linear;
+}
+
+#viewReciept:hover{
+    background-color: #0b75b9;
+    color: #fff;
+    border-color: #0b75b9;
+}
+
+/* Loader */
+.load-container{
+    width: 85px;
+    background: #fff;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 22px -10px #000;
+}
+
+.custom-loader {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 8px solid #0000;
+    border-right-color: #093FB797;
+    position: relative;
+    animation: s4 1s infinite linear;
+  }
+  .custom-loader:before,
+  .custom-loader:after {
+    content: "";
+    position: absolute;
+    inset:-8px;
+    border-radius: 50%;
+    border:inherit;
+    animation:inherit;
+    animation-duration: 2s;
+  }
+  .custom-loader:after {
+    animation-duration: 4s;
+  }
+  
+  @keyframes s4 {
+    100% {transform: rotate(1turn)}
+  }
+
+/* Progress Bar */
+.progWrapper{
+    height: 110px;
+    max-height: 125px;
+    overflow-y: auto;
+}
+
+.progArea{
+    position: relative;
+}
+.progDot{
+    /* position: absolute; */
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #38abff;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    line-height: 39px;
+    left: 40px;
+    z-index: 2;
+}
+.progBar, .progBarBottom{
+    /* position: absolute; */
+    height: 23px;
+    width: 3px;
+    background: #69c0ff;
+    z-index: 1;
+}
+.progBarBottom{
+    height: 13px;
+}
+
+/* Send Feedback */
+.emailBody{
+    border: 1px solid #c7c7c7;
+    padding: 10px;
+    outline: 0;
+    resize: none;
+}
+.emailTo{
+    color: #707070;
+}
+.sendBtn{
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    padding: 4px 11px;
+    border-radius: 12px;
+    transition: .15s all ease-in-out;
+}
+.sendBtn:hover{
+    background-color: #2a70f9;
+    border-color: #2a70f9;
+    color: #FFF;
+}
+
+/* Cancellation */
+#reason{
+    outline: 0;
+    background: #FFF;
+    resize: none;
+    padding: 10px;
+    border: 1px solid #b5b5b5;
+    transition: all .2s linear;
+    color: #505050;
+}
+#reason + label{
+    position: absolute;
+    top: -28px;
+    left: 0;
+    border-bottom: 1px solid transparent;
+    color: #141414;
+}
+
+#reason:not(:placeholder-shown) {
+    border-color: #90c7ff;
+}
+
+.v-err{
+    margin: 1px 0 0 25px;
+    font-size: 12px;
+    color: Red;
+}
+
+
+@media only screen and (max-width:991px){
+    .border-md-bottom{
+        border-bottom: 1px solid #dee2e6;
+    }
+}
+
+@media only screen and (min-width:992px){
+    .border-lg-right{
+        border-right: 1px solid #dee2e6;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+    .show-md {
+      display: block !important;
+    }
+  }

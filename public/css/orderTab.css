@@ -1,0 +1,29 @@
+.fs-18{font-size: 18px;}
+.fs-14{font-size: 14px;}
+.headcol{color: #626262;}
+.newOrdHT{max-height: 180px;}
+
+th{
+    font-size: 15px;
+    font-family: "Poppins";
+    font-weight: 500;
+}
+
+/* For no data */
+.newOrd .nodata img{
+    height: 110px;
+}
+
+.ordList .nodata img{
+    height: 210px;
+}
+
+.nodata{
+    opacity: 0.7;
+    color: #7e7e7e;
+}
+
+.ordList td{
+    white-space: nowrap;
+    padding: 10px;
+}

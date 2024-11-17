@@ -1,0 +1,200 @@
+.poppins{font-family: 'Poppins', sans-serif;}
+.fs-14{font-size:14px;}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contain{
+    width: 400px;
+    border: 1px solid #fff;
+    padding: 40px 55px 40px 55px;
+    box-shadow: 0px 4px 10px -1px rgb(0 0 0 / 25%);
+    border-radius: 10px;
+}
+
+.logForm{
+    width: 100%;
+}
+
+.title{
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    color: #343434;
+}
+
+.center{text-align: center; display: block;}
+
+.logo{ width: 100%;}
+
+.logo > img {
+    width: 60%;
+    margin-bottom: 30px;
+}
+
+.forgot:hover{
+    border-bottom: 1px solid !important;
+}
+
+#passEye{
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    color: #737178;
+    cursor: pointer
+}
+
+/* 'r-' Prefix: Registration Page */
+
+.sub, .r-sub, .l-sub{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #545454;
+    margin: 7px 0 70px 0;
+}
+
+.l-sub{
+    margin: 7px 0 75px 0;
+}
+.r-sub{
+    margin: 7px 0 40px 0;
+}
+
+input{
+    outline:0;
+    border: none;
+    width: 100%;
+    font-size: 18px;
+}
+
+.floater, .r-floater{
+    position: relative;
+    width: 100%;
+    margin: 40px 0;
+}
+
+.r-floater{
+    margin: 25px 0;
+}
+
+.email{
+    border-bottom: 1px solid #8b8b8b;
+    padding: 10px 0;
+    transition: all .3s linear;
+    margin-left: auto;
+    display: flex;
+    width: calc(100% - 50px);
+    font-family: 'Lato', sans-serif;
+}
+
+
+label{
+    position: absolute;
+    top: -2px;
+    left: 0;
+    transition: all 0.4s ease;
+    opacity: 0;
+    padding-left: 50px;
+    color: hsl(16.62deg 91.74% 31.62%);
+}
+
+.r-floater input:not(:placeholder-shown),
+.floater input:not(:placeholder-shown){
+    padding: 12px 0 8px 0;
+    border-bottom: 1px solid hsl(16.62deg 95.16% 67.46%);
+}
+
+.r-floater input:not(:placeholder-shown) + label,
+.floater input:not(:placeholder-shown) + label{
+    transform: translateY(-10px);
+    opacity: 0.7;
+    
+}
+
+.r-floater input:focus,
+.floater input:focus{
+    border-bottom: 1px solid hsl(16.62deg 95.16% 67.46%);
+}
+
+.icon{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.4;
+}
+
+.icon img, ion-icon{
+    width: 26px;
+    height: 25px;
+}
+
+
+
+.enter, .reg{
+    padding: 10px 0;
+    margin: 5px 0 0 0;
+    background: linear-gradient(72.5deg, rgb(0, 175, 255) 27.9%, rgb(0, 224, 254) 84.2%);
+    color: #fff;
+    border-radius: 10px;
+    font-family: 'Poppins';
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.reg{
+    background-image: unset;
+    background-color: #3f99f5;
+    border: 2px solid #6497cb7a;
+    color: #fff;
+}
+
+.reg:hover{
+    background-color: #fff;
+    border: 2px solid #3f99f5;
+    color: #3f99f5;
+}
+
+.signup{
+    margin-top: 70px;
+    font-family: 'Poppins';
+    font-size: 13px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.errors{
+    margin: 20px 0;
+    text-align: center;
+    color: red;
+}
+
+.errors p{
+    margin: 8px 0;
+}
+
+.v-err{
+    margin: 5px 0 0 49px;
+    position: absolute;
+    font-size: 12px;
+    color: Red;
+}

@@ -1,0 +1,264 @@
+.u-summ{
+    border: 1px solid #e3e3e3;
+    background: #fff;
+    padding: 20px 0px 0px 0px;
+}
+
+.hrcol{
+    border-bottom: 1px solid #ededed;
+    color: #484848;
+}
+
+.summ div > ion-icon {
+    height: 40px;
+    width: 40px;
+}
+
+.summ .item, .bord-btm{
+    border-bottom: 1px solid #ededed;
+}
+
+.tablewrapper{
+    padding: 1.5rem 1.3rem;
+}
+
+th{
+    font-size: 15px;
+    font-family: "Poppins";
+    font-weight: 500;
+}
+
+td{
+    padding: 0.8rem !important;
+    white-space: nowrap;
+}
+
+.cardtitle{
+    color: #626262;
+    FONT-SIZE: 14px;
+    font-weight: 500;
+}
+
+.poppins{font-family: "Poppins", sans-serif;}
+.bot-margin{ margin-bottom: 1.5rem;}
+
+.addUsr{
+    padding: 5px 9px;
+    font-size: 13px;
+}
+
+.clickRow{
+    cursor: pointer;
+}
+
+/* For no data */
+.nodata img{
+    height: 200px;
+}
+
+.nodata{
+    opacity: 0.7;
+    color: #7e7e7e;
+}
+
+/* Add User Form */
+.formWrapper{
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    background: #fff;
+    padding: 2rem 1.5rem;
+    border: 1px solid #b9b9b9;
+    border-radius: 20px;
+    transition: all .15s ease-in;
+}
+
+.formWrapper.active{
+    display: block;
+}
+
+.bot-btn{
+    width: 75px !important;
+    padding: 4px !important;
+    font-size: 14px;
+}
+
+.closeBtn{
+    position: absolute;
+    top: -15px;
+    right: -3px;
+}
+
+.closeBtn:hover{
+    cursor: pointer;
+}
+
+.gap13{gap: 13px;}
+
+
+/* Loader */
+
+#loadOverlay{
+    position: absolute;
+    inset: 0;
+    background: #c1c1c15c;
+    z-index: 1;
+    display: none;
+}
+
+#updLoad{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: none;
+}
+
+#boxLoad{
+    background: #ffffff;
+    padding: 40px 40px 30px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 24px -7px #696969;
+    border-radius: 15px
+}
+
+#loadArea{
+    position: absolute;
+    width: calc(100% - 3rem);
+    min-height: 150px;
+    height: calc(100% - 3rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f1f1f1b8;
+    z-index: 1;
+}
+.custom-loader2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background:#766DF4;
+    -webkit-mask:radial-gradient(circle closest-side at 50% 40%,#0000 94%, #000);
+    transform-origin: 50% 40%;
+    animation: s5 1s infinite linear;
+  }
+  
+  @keyframes s5 {
+    100% {transform: rotate(1turn)}
+  }
+
+
+/* Overlays */
+.overlay{
+    position: fixed;
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0;
+    inset: 0;
+    background: hsla(0, 0%, 0%, 0.6);
+    transition: all .2s ease-in;
+}
+
+.overlay.active, .formWrapper.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.tblHeight{max-height: 300px;}
+
+
+/* Shipments Checkboxes */
+
+.shChckLbl{
+    font-size: 13px;
+    font-weight: 500;
+    color: #1f870d;
+    padding-top: 4px;
+}
+
+.shChecker{
+    transform: scale(1.3);
+    border-color: #97a588;
+}
+
+.shChecker:checked{
+    background-color:#108719;
+    border-color: #108719;
+}
+.shUndo{
+    transform: scale(1.3);
+    border-color: #ff9292;
+}
+.shUndo:checked{
+    background-color: #ff1f1f;
+    border-color: #ff1f1f;
+}
+
+.shUpd{
+    top: -65px;
+    left: 50%;
+    transform: translateX(-45%);
+    padding: 10px 20px;
+    background: #fff;
+    box-shadow: 0 0 15px -2px #5d91f1;
+    transition: all .45s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.clickRow:hover {
+    color: #1970db !important;
+    transition: color .2s ease-out;
+}
+
+/* Filter Css */
+.shFilter{
+    /* width: auto; */
+    font-size: 15px;
+    font-weight: 500;
+    border: 0;
+    background-color: #049eb7;
+    color: #fff;
+    border-radius: 0 0.37rem 0.37rem 0;
+}
+.shFilter:focus{
+    box-shadow: unset;
+}
+.filterBox{
+    border: 1px solid #cdcdcd;
+}
+
+/* Allocate Select */
+.vehiSel, .vehiSel option:disabled,
+.drivSel, .drivSel option:disabled {
+    color: #737272;
+}
+.vehiSel option:not(first-child),
+.drivSel option:not(first-child){
+    color: #000;
+}
+
+@media (min-width: 768px){
+    .bord-md-right{
+        border-right:1px solid #ededed;
+    }
+}
+
+@media (max-width: 720px){
+    .bord-btm{
+        border-bottom: 0;
+    }
+}
+
+@media (min-width: 720px){
+    .summ .item{
+        border-bottom: 0;
+    }
+}

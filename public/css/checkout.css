@@ -1,0 +1,268 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.fs-12{font-size: 12px;}
+
+.checkBox{
+    box-shadow: 0 1px 25px -13px #a7a7a7;
+    border: 2px solid #838383;
+    background-color: #fff;
+}
+
+.f-head{
+    background-color: #838383;
+    color: #fff;
+}
+
+.bk-i{
+    height: 28px;
+    width: 28px;
+}
+
+.contentWrapper{
+    padding: 30px;
+    font-size: 15px;
+}
+
+.curv::before{
+    content: '';
+    background: linear-gradient(181.2deg, rgb(181, 239, 249) 10.5%, rgb(254, 254, 254) 86.8%);
+    width: 100%;
+    display: block;
+    height: 400px;
+    position: absolute;
+    top: 0px;
+    z-index: -5;
+}
+
+.curv::after{
+    content: '';
+    display: block;
+    z-index: -4;
+    position: absolute;
+    height: 427px;
+    background: #FFF;
+    width: 870px;
+    right: -190px;
+    border-radius: 100%;
+    top: 39px;
+    transform: rotate(356deg);
+    opacity: 0.6;
+}
+
+.poppins{font-family: "Poppins", sans-serif;}
+
+.tags{
+    background: #38a3ff;
+    color: #fff;
+    padding: 3px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    width: fit-content;
+}
+
+.lightBl{background: #badfff;}
+
+.ligherBl{background: #d9edff;}
+
+/* Progress Bar*/
+.Vline{
+    background: #72a3a9;
+    height: 1.5px;
+}
+.Hline{
+    height: 210px;
+    width: 2px;
+    background: #72a3a9; 
+}
+.blockingDesc{
+    position: absolute;
+    left: -16px;
+}
+.circlePg{
+    padding: 4px;
+    border-radius: 100%;
+    background: #979494;
+    color: #fff;
+    display: flex;
+}
+.iconPG{
+    width: 25px;
+    height: 25px;
+}
+.progDesc{
+    font-size: 15px;
+    margin-left: 15px;
+    color: #616161;
+}
+.blockingDesc.active{
+    left: -21px;
+}
+.circlePg.active{
+    background: #616060;
+}
+.iconPG.active{
+    width: 35px;
+    height: 35px;
+}
+.progDesc.active{
+    font-size: 18px;
+    color: #000;
+}
+.vertProgLine{
+    background: #b1b0b0;
+    height: 1px;
+    width: 40px;
+    margin: 0 15px;
+}
+
+.vertProg .Hline .blockingDesc:nth-child(1){
+    top: 20px;
+}
+
+.vertProg .Hline .blockingDesc:nth-child(2){
+    top: 90px;
+}
+.vertProg .Hline .blockingDesc:nth-child(2).active{
+    top: 80px;
+}
+.vertProg .Hline .blockingDesc:nth-child(3){
+    top: 150px;
+}
+
+/* Loader */
+
+#loadOverlay{
+    position: absolute;
+    inset: 0;
+    background: #c1c1c15c;
+    z-index: 1;
+    display: none;
+}
+
+#loadArea{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: none;
+}
+
+#boxLoad{
+    background: #ffffff;
+    padding: 40px 40px 30px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 24px -7px #696969;
+    border-radius: 15px
+}
+.custom-loader2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background:#766DF4;
+    -webkit-mask:radial-gradient(circle closest-side at 50% 40%,#0000 94%, #000);
+    transform-origin: 50% 40%;
+    animation: s5 1s infinite linear;
+  }
+  
+  @keyframes s5 {
+    100% {transform: rotate(1turn)}
+  }
+
+/* Payment Method Css */
+
+.radioWrapper{
+    font-size: 15px;
+}
+
+.rad-btn{
+    padding: 20px 60px;
+    border: 1px solid #959595;
+    border-radius: 30px;
+    background-image: linear-gradient(4deg, #a9d2f1, #fbfdff);
+    position: relative;
+    transition: all .2s ease-in;
+    box-shadow: 2px 3px 7px -2px #0000;
+}
+.radioWrapper ion-icon{
+    width: 40px;
+    height: 40px;
+}
+.radioWrapper > input{
+    display: none;
+}
+.radioWrapper input:checked + .rad-btn{
+    box-shadow: 2px 3px 7px -2px #7f7f7f;
+    border: 0;
+}
+
+.radioWrapper input:not(:checked) + .rad-btn{
+    opacity: 0.7;
+}
+
+.rad-btn::before{
+    content: '';
+    height: 18px;
+    width: 18px;
+    background: #FFF;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 21px;
+    left: 24px;
+    transition: all .2s ease-in;
+}
+
+.radioWrapper input:checked +
+.rad-btn::before{
+    background: #143f5c;
+}
+
+.cont-btn{
+    padding: 8px 20px;
+    gap: 6px;
+    background-color: #0098cf;
+    color: #fff;
+    font-size: 17px;
+    transition: .2s linear;
+    border-radius: 20px;
+}
+
+.cont-btn:hover{
+    background-color: #00bcff;  
+}
+
+.cont-btn:hover ion-icon{
+    transform: translateX(7px);
+}
+
+.back{
+    display: contents;
+    font-size: 16.5px;
+}
+
+
+
+@media(max-width: 576px){
+    .radioWrapper{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 991px){
+    .vertProg{
+        display: none !important;
+    }
+}
+
+
+@media (min-width: 992px){
+    .horizProg{
+        display: none !important;
+    }
+}

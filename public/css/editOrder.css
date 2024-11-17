@@ -1,0 +1,13 @@
+
+.inputOrd{
+    border: none;
+    border-bottom: 1px solid #0482ed;
+    color: #0482ed;
+    text-align: end;
+    padding: 0 5px 0 0;
+    outline: 0;
+}
+.num-input{
+    width: 50px;
+}
+.titleBlue{color: #2577ab;}
